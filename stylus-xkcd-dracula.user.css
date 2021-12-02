@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name          XKCD Dracula
+@namespace     github.com/xnaas/stylus-xkcd-dracula
+@homepageURL   https://github.com/xnaas/stylus-xkcd-dracula
+@version       0.0.1
+@updateURL     https://raw.githubusercontent.com/xnaas/stylus-xkcd-dracula/master/stylus-xkcd-dracula.user.css
+@description   Dracula XKCD with optional image color inverting. 
+@author        xnaas
+@preprocessor  stylus
+@var           checkbox invert-images "Invert image colors" 1
+==/UserStyle== */
+
+body {
+  background-color: #282a36;
+  color: #f8f8f2;
+}
+
+#topContainer, #middleContainer, #bottom {
+  background-color: #282a36;
+}
+
+#topLeft a, a {
+  color: #8be9fd;
+}
+
+if invert-images {
+  img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+}
